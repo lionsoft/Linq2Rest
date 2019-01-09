@@ -112,3 +112,4 @@ UpgradeLog*.XML
 
 App_Bin/
 PerfMon/
+/.vs

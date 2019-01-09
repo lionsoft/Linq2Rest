@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{B5D21EFA-44E8-4766-99B4-A4292F71CBCD}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3D0F6A
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq2Rest", "Linq2Rest\Linq2Rest.csproj", "{FEF6620A-87C8-43B4-92BD-5FAAD183CBC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq2Rest", "Linq2Rest\Linq2Rest.csproj", "{FEF6620A-87C8-43B4-92BD-5FAAD183CBC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq2Rest.Tests", "Linq2Rest.Tests\Linq2Rest.Tests.csproj", "{0D3564AF-F8C9-42A4-8A01-A4C95526FA28}"
 EndProject
@@ -42,6 +42,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq2Rest.Reactive.Net451", "Linq2Rest.Reactive\Linq2Rest.Reactive.Net451.csproj", "{7DBE748C-8E53-4B35-B019-6E6F48299C9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq2Rest.Reactive.WinRT", "Linq2Rest.Reactive.WinRT\Linq2Rest.Reactive.WinRT.csproj", "{9851DBA4-84B5-4BB2-AAD8-FF723371C204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq2Rest.Net40", "Linq2Rest\Linq2Rest.Net40.csproj", "{DD385330-0D70-4C4A-972F-43756E489D48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -181,8 +183,27 @@ Global
 		{9851DBA4-84B5-4BB2-AAD8-FF723371C204}.Release|x64.Build.0 = Release|x64
 		{9851DBA4-84B5-4BB2-AAD8-FF723371C204}.Release|x86.ActiveCfg = Release|x86
 		{9851DBA4-84B5-4BB2-AAD8-FF723371C204}.Release|x86.Build.0 = Release|x86
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|ARM.Build.0 = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|x64.Build.0 = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Debug|x86.Build.0 = Debug|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|ARM.ActiveCfg = Release|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|ARM.Build.0 = Release|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|x64.ActiveCfg = Release|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|x64.Build.0 = Release|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD385330-0D70-4C4A-972F-43756E489D48}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E233A334-5250-4E30-9A64-FB51D3498FE9}
 	EndGlobalSection
 EndGlobal

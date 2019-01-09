@@ -37,9 +37,12 @@ namespace Linq2Rest
 
 		static RuntimeTypeProvider()
 		{
-			ModuleBuilder = Thread
-				.GetDomain()
-				.DefineDynamicAssembly(AssemblyName, AssemblyBuilderAccess.Run)
+			ModuleBuilder = 
+#if NETSTANDARD
+                AssemblyBuilder.DefineDynamicAssembly(AssemblyName, AssemblyBuilderAccess.Run)
+#else
+                Thread.GetDomain().DefineDynamicAssembly(AssemblyName, AssemblyBuilderAccess.Run)
+#endif
 				.DefineDynamicModule(AssemblyName.Name);
 		}
 
@@ -65,7 +68,7 @@ namespace Linq2Rest
 			properties = properties.ToArray();
 			if (!properties.Any())
 			{
-				throw new ArgumentOutOfRangeException("properties", "properties must have at least 1 property definition");
+				throw new ArgumentOutOfRangeException(nameof(properties), "properties must have at least 1 property definition");
 			}
 
 			var dictionary = properties.ToDictionary(f => _nameResolver.ResolveName(f), memberInfo => memberInfo);
@@ -87,8 +90,11 @@ namespace Linq2Rest
 					{
 						CreateProperty(typeBuilder, field);
 					}
-
-					return typeBuilder.CreateType();
+#if NETSTANDARD
+					return typeBuilder.CreateTypeInfo();
+#else
+                    return typeBuilder.CreateType();
+#endif
 				});
 		}
 
